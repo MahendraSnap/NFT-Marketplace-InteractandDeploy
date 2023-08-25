@@ -8,8 +8,6 @@ export default function Home() {
   const [isMetamaskConnected, setIsMetamaskConnected] = useState(false);
   const [nftContractAddress, setNFTContractAddress] = useState("");
   const [marketplaceContractAddress, setMarketplaceContractAddress] = useState("");
-  const [nftAirdropContractAddress, setNFTAirdropContractAddress] = useState("");
-  const [ticketQueueContractAddress, setTicketQueueContractAddress] = useState("");
 
 const downloadTxtFile = (contractName:string, contractAddress:string) => {
   const formattedContent = `Contract Address ${contractName}: ${contractAddress}`;
@@ -123,7 +121,7 @@ const deployMarketPLaceContract = async (listPrice:number) => {
                 <td>
                   <input
                     type="text"
-                    placeholder="Name"
+                    placeholder="contract Address"
                     className="px-4 py-2 bg-grey-100 text-black rounded-md"
                     id="contractAddress"
                   />
