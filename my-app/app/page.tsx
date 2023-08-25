@@ -138,7 +138,7 @@ const deployMarketPLaceContract = async (listPrice:number) => {
                 </td>
                 <td>
                   <input
-                    type="text"
+                    type="number"
                     placeholder="royalty Fee"
                     className="px-4 py-2 bg-grey-100 text-black rounded-md"
                     id="royaltyFee"
@@ -149,14 +149,14 @@ const deployMarketPLaceContract = async (listPrice:number) => {
                 <td>
                   <button
                     onClick={() => deployMarketPLaceContract(
-                      parseFloat(document.getElementById('marketplaceListPrice').value)
+                      parseFloat((document.getElementById('marketplaceListPrice') as HTMLInputElement).value)
                     )}
                     className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring focus:ring-green-300"
                   >
                     Deploy Marketplace Contracts
                   </button>
                 </td>
-                <td colSpan="3">
+                <td>
                   <input
                     type="number"
                     placeholder="List Price"
